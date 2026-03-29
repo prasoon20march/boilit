@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #fff5f0 0%, #fffbf0 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.icon-circle {
+    display: inline-block;
+    padding: 20px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.egg-icon {
+    width: 48px;
+    height: 48px;
+    color: #f97316;
+}
+
+.logo {
+    font-size: 3.5rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.logo-text {
+    color: #1f2937;
+}
+
+.logo-egg {
+    color: #f97316;
+    font-size: 4rem;
+    display: inline-block;
+    transform: rotate(-10deg);
+    text-shadow: 2px 2px 8px rgba(249, 115, 22, 0.3);
+    margin: 0 2px;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.card {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 15px;
+}
+
+.egg-input {
+    width: 100%;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+    border: 2px solid #fed7aa;
+    border-radius: 15px;
+    transition: border-color 0.3s;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+}
+
+.egg-input:focus {
+    outline: none;
+    border-color: #fb923c;
+}
+
+.boil-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.boil-btn {
+    padding: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.boil-btn:hover {
+    border-color: #fdba74;
+    transform: translateY(-2px);
+}
+
+.boil-btn.active {
+    border-color: #f97316;
+    background: #fff7ed;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+}
+
+.boil-name {
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.boil-desc {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 8px;
+}
+
+.boil-time {
+    font-size: 0.75rem;
+    color: #ea580c;
+    font-weight: 600;
+}
+
+.water-box {
+    background: #eff6ff;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.water-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.droplet-icon {
+    width: 32px;
+    height: 32px;
+    color: #3b82f6;
+}
+
+.water-label {
+    font-weight: 600;
+    color: #374151;
+}
+
+.water-sublabel {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.water-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.start-btn {
+    width: 100%;
+    padding: 25px;
+    background: linear-gradient(135deg, #f97316 0%, #facc15 100%);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(249, 115, 22, 0.3);
+    transition: all 0.3s;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.start-btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(249, 115, 22, 0.4);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.timer-display {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.timer-icon-circle {
+    display: inline-block;
+    padding: 25px;
+    background: #fff7ed;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.timer-icon {
+    width: 64px;
+    height: 64px;
+    color: #f97316;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.time-text {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 10px;
+}
+
+.timer-info {
+    color: #6b7280;
+    font-size: 1.1rem;
+}
+
+.progress-section {
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 16px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f97316 0%, #facc15 100%);
+    width: 0%;
+    transition: width 1s linear;
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 10px;
+}
+
+.bubbles {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.bubble {
+    width: 12px;
+    height: 12px;
+    background: #60a5fa;
+    border-radius: 50%;
+    animation: bounce 1s infinite;
+}
+
+.bubble:nth-child(1) { animation-delay: 0s; }
+.bubble:nth-child(2) { animation-delay: 0.1s; }
+.bubble:nth-child(3) { animation-delay: 0.2s; }
+.bubble:nth-child(4) { animation-delay: 0.3s; }
+.bubble:nth-child(5) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.stop-btn {
+    width: 100%;
+    padding: 25px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+    transition: all 0.3s;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.stop-btn:hover {
+    background: #dc2626;
+}
+
+.instructions {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.instructions h2 {
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.instructions ol {
+    color: #6b7280;
+    padding-left: 20px;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+    
+    .logo-egg {
+        font-size: 3rem;
+    }
+    
+    .card {
+        padding: 25px;
+    }
+    
+    .boil-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .time-text {
+        font-size: 4rem;
+    }
+    
+    .water-box {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
