@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b0ilit - Perfect Boiled Eggs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="icon-circle">
+                <svg class="egg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22c3.866 0 7-4.477 7-10S12 2 12 2 5 6.477 5 12s3.134 10 7 10z"/>
+                </svg>
+            </div>
+            <h1 class="logo">
+                <span class="logo-text">b</span><span class="logo-egg">0</span><span class="logo-text">ilit</span>
+            </h1>
+            <p class="subtitle">Gives perfect boiled eggs</p>
+        </div>
+
+        <div class="card">
+            <div id="setupScreen">
+                <div class="section">
+                    <label class="label">Number of Eggs</label>
+                    <input type="number" id="numEggs" min="1" max="12" value="1" class="egg-input">
+                </div>
+
+                <div class="section">
+                    <label class="label">Boiling Type</label>
+                    <div class="boil-options">
+                        <button class="boil-btn active" data-type="soft" data-time="6">
+                            <div class="boil-name">Soft Boiled</div>
+                            <div class="boil-desc">Runny yolk</div>
+                            <div class="boil-time">6 min</div>
+                        </button>
+                        <button class="boil-btn" data-type="medium" data-time="9">
+                            <div class="boil-name">Medium Boiled</div>
+                            <div class="boil-desc">Creamy yolk</div>
+                            <div class="boil-time">9 min</div>
+                        </button>
+                        <button class="boil-btn" data-type="hard" data-time="12">
+                            <div class="boil-name">Hard Boiled</div>
+                            <div class="boil-desc">Firm yolk</div>
+                            <div class="boil-time">12 min</div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="water-box">
+                    <div class="water-info">
+                        <svg class="droplet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                        </svg>
+                        <div>
+                            <div class="water-label">Water Required</div>
+                            <div class="water-sublabel">Enough to cover eggs</div>
+                        </div>
+                    </div>
+                    <div class="water-amount" id="waterAmount">0.5 cups</div>
+                </div>
+
+                <button id="startBtn" class="start-btn">Start Boiling</button>
+            </div>
+
+            <div id="timerScreen" class="hidden">
+                <div class="timer-display">
+                    <div class="timer-icon-circle">
+                        <svg class="timer-icon pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <div class="time-text" id="timeText">0:00</div>
+                    <div class="timer-info" id="timerInfo">Medium Boiled • 1 egg</div>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-text" id="progressText">0% Complete</div>
+                </div>
+
+                <div class="bubbles">
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                    <div class="bubble"></div>
+                </div>
+
+                <button id="stopBtn" class="stop-btn">Stop Timer</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>How to Use:</h2>
+            <ol>
+                <li>Enter the number of eggs you want to boil</li>
+                <li>Select your preferred boiling type (soft, medium, or hard)</li>
+                <li>Add the recommended amount of water to your pot</li>
+                <li>Bring water to a boil, then add eggs</li>
+                <li>Click "Start Boiling" and we'll time it perfectly!</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
